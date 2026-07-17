@@ -23,6 +23,8 @@ start_date = "2015-01-01"
 end_date = "2025-12-31"
 
 df = yf.download(ticker, start=start_date, end=end_date)
+if isinstance(df.columns, pd.MultiIndex):
+    df.columns = df.columns.get_level_values(0)
 
 print("\n--- Raw Data ---")
 print(df.head())
