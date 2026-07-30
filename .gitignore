@@ -24,3 +24,6 @@ models/*
 
 # Temporary outputs
 *.log
+# Generated training outputs
+results/metrics/*.npy
+results/metrics/*training_time.txt
